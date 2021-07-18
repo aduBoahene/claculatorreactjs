@@ -36,12 +36,11 @@ export default function Keyboard() {
 
   const handleSeven = (num) => {
     setScreenValue(screenValue + num)
-    console.log("screen value",screenValue)
   }
 
   return (
     <div className="flex flex-col">
-      <Screen handleOnChangeMain={(e) => setScreenValue(e.target.value)} value={screenValue} />
+      <Screen handleOnChange={(e) => setScreenValue(e.target.value)} value={screenValue} />
       <div className="flex justify-evenly p-8 flex-wrap w-96 max-w-xs mx-auto rounded-lg">
         <Knob
           number="C"
